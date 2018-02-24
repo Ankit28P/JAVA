@@ -1,0 +1,33 @@
+package data;
+
+public class numbers {
+
+	public static void main(String[] args) {
+		int number;
+		System.out.println("Generate 1000 number: ");
+		for(number=0; number<1001;number++) {
+			
+			System.out.println(number);
+			
+		}
+		System.out.println("Multiple of 5: ");
+		for(number=0; number<1001;number++) {
+		if(number%5 ==0) {
+			
+			System.out.println(number);
+			
+		}
+		}
+		System.out.println("odd number: ");
+		for(number=0; number<1001;number++) {
+			if(number%2 !=0) {
+				
+				System.out.println(number);
+				
+			}
+		}
+		
+
+	}
+
+}
