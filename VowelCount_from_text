@@ -1,0 +1,70 @@
+package data;
+
+import java.util.Scanner;
+
+public class VowelCount {
+
+	public static void main(String[] args) {
+		int a=0,e=0,i=0,o=0,u=0;
+		String s = "";
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter any sentance: ");
+		s = scan.nextLine();
+		scan.close();
+		System.out.println("String: \t"+s);
+		for(int x=0; x<s.length(); x++) {
+			switch(s.charAt(x)) {
+			case 'a':
+				a++;
+				break;
+			case 'e':
+				e++;
+				break;
+			case 'i':
+				i++;
+				break;
+			case 'o':
+				o++;
+				break;
+			case 'u':
+				u++;
+				break;
+			case 'A':
+				a++;
+				break;
+			case 'E':
+				e++;
+				break;
+			case 'I':
+				i++;
+				break;
+			case 'O':
+				o++;
+				break;
+			case 'U':
+				u++;
+				break;
+				
+			}
+		}
+		if(a>0) {
+			System.out.println("Numbers of a: "+a);
+		}
+		if(e>0) {
+			System.out.println("Numbers of e: "+e);
+		}
+		if(i>0) {
+			System.out.println("Numbers of i: "+i);
+		}
+		if(o>0) {
+			System.out.println("Numbers of o: "+o);
+		}
+		if(u>0) {
+			System.out.println("Numbers of e: "+u);
+		}
+	//	System.out.println("\tNumber of a: "+a+"\n\tNumber of e: "+e+"\n\t Number of i: "+i+"\n\t Number of o: "+o+"\n\t Number of u: "+u);
+	
+		
+	}
+
+}
