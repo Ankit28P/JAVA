@@ -1,0 +1,44 @@
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+class Solution {
+
+	 public List<List<Integer>> permute(int[] nums) {
+	        int N = nums.length;
+	        List<List<Integer>> sol = new ArrayList<>();
+	        LinkedList<Integer> buffer = new LinkedList<>();
+	        boolean[] used = new boolean[N];
+	        dfs(buffer, sol, used, nums, 0);
+	        
+	        return sol;
+	    }
+	    
+	    void dfs(LinkedList<Integer> buffer, List<List<Integer>> sol, boolean[] used, int[] nums,int k){
+	        int N = nums.length;
+	        if (k == N){
+	            sol.add(new ArrayList<>(buffer));
+	            return;
+	        }
+	        for (int i = 0; i < used.length; i++) {
+	            if (!used[i]){
+	            used[i] = true;
+	            buffer.push(nums[i]);
+	            dfs(buffer, sol, used, nums, k+1);
+	            used[i] = false;
+	            buffer.pop();
+	            }
+	        }
+	        
+	    }
+
+/*
+public static void main(String[] args) {
+		int[] a = {1,2,3};
+		System.out.println(new Solution().permute(a));
+	}
+*/
+	
+}
