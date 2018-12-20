@@ -1,0 +1,10 @@
+public int lengthOfLastWord(String s) {
+        s = s.trim();
+        
+		
+        if (s.lastIndexOf(" ") != -1)
+            return (s.substring(s.lastIndexOf(" ")+1)).length();
+            
+        return s.length();
+        
+    }
